@@ -1,0 +1,182 @@
+.geneico-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  color: #0d1b32;
+  background: rgba(255, 255, 255, 0.96);
+  border-bottom: 1px solid #e5eaf1;
+  box-shadow: 0 4px 18px rgba(7, 26, 58, 0.05);
+  backdrop-filter: blur(14px);
+}
+
+.geneico-header,
+.geneico-header * {
+  box-sizing: border-box;
+}
+
+.geneico-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  width: min(1180px, calc(100% - 48px));
+  min-height: 78px;
+  margin: 0 auto;
+}
+
+.geneico-brand {
+  display: inline-flex;
+  flex: none;
+  text-decoration: none;
+}
+
+.geneico-brand img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 230px;
+  max-height: 52px;
+  object-fit: contain;
+}
+
+.geneico-navigation {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: auto;
+}
+
+.geneico-navigation__link,
+.geneico-navigation__language {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  padding: 9px 13px;
+  color: #0d1b32;
+  border-radius: 9px;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-decoration: none;
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.geneico-navigation__link:hover,
+.geneico-navigation__link:focus-visible,
+.geneico-navigation__link[aria-current="page"] {
+  color: #145de8;
+  background: #edf4ff;
+}
+
+.geneico-navigation__language {
+  min-width: 42px;
+  margin-left: 8px;
+  color: #145de8;
+  border: 1px solid #d7e5ff;
+  background: #f7faff;
+}
+
+.geneico-navigation__language:hover,
+.geneico-navigation__language:focus-visible {
+  color: #fff;
+  background: #145de8;
+  border-color: #145de8;
+}
+
+.geneico-menu-button {
+  display: none;
+  width: 44px;
+  height: 44px;
+  margin: 0;
+  padding: 9px;
+  color: #071a3a;
+  background: transparent;
+  border: 1px solid #dce3ed;
+  border-radius: 9px;
+  cursor: pointer;
+}
+
+.geneico-menu-button span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  margin: 4px auto;
+  background: currentColor;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.geneico-menu-button[aria-expanded="true"] span:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+
+.geneico-menu-button[aria-expanded="true"] span:nth-child(2) {
+  opacity: 0;
+}
+
+.geneico-menu-button[aria-expanded="true"] span:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+@media (max-width: 800px) {
+  .geneico-header__inner {
+    position: relative;
+    min-height: 72px;
+  }
+
+  .geneico-menu-button {
+    display: block;
+    flex: none;
+  }
+
+  .geneico-navigation {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    display: none;
+    align-items: stretch;
+    flex-direction: column;
+    gap: 3px;
+    max-height: calc(100vh - 88px);
+    margin: 0;
+    padding: 12px;
+    overflow-y: auto;
+    background: #fff;
+    border: 1px solid #e5eaf1;
+    border-top: 0;
+    border-radius: 0 0 12px 12px;
+    box-shadow: 0 16px 35px rgba(7, 26, 58, 0.12);
+  }
+
+  .geneico-navigation.is-open {
+    display: flex;
+  }
+
+  .geneico-navigation__link,
+  .geneico-navigation__language {
+    justify-content: flex-start;
+    width: 100%;
+    min-height: 44px;
+    margin: 0;
+    padding: 11px 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .geneico-header__inner {
+    width: calc(100% - 30px);
+  }
+
+  .geneico-brand img {
+    max-width: 180px;
+    max-height: 46px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .geneico-header * {
+    transition: none;
+  }
+}
