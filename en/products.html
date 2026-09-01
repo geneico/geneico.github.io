@@ -10,13 +10,13 @@
     <!--[if lte IE 6]><link rel="stylesheet" media="screen,projection" type="text/css" href="css/main-ie6.css" /><![endif]-->
     <link rel="stylesheet" media="screen,projection" type="text/css" href="css/style.css" />
     <link rel="stylesheet" media="screen,projection" type="text/css" href="../css/site-modern.css" />
+    <link rel="stylesheet" media="screen,projection" type="text/css" href="../css/products-modern.css" />
     <link rel="stylesheet" media="screen,projection" type="text/css" href="../css/shared-header.css" />
-    <style type="text/css">.content h2[id^="p"] { scroll-margin-top: 100px; }</style>
     <script src="js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="js/loopedslider.js" type="text/javascript" charset="utf-8"></script>
     <script src="../js/site-navigation.js" type="text/javascript" charset="utf-8" defer></script>
   </head>
-  <body>
+  <body class="products-page">
     <div id="main">
       <header class="geneico-header">
         <div class="geneico-header__inner">
@@ -36,7 +36,16 @@
       <!-- Columns box -->
       <div class="cols box">
         <!-- Content -->
-        <div class="content">
+        <nav class="product-category-nav" aria-label="Product categories">
+          <a href="#weighing-data">Weighing &amp; Data Management</a>
+          <a href="#labelling-control">Labelling &amp; Remote Operations</a>
+          <a href="#traceability-management">Traceability &amp; Production Management</a>
+          <a href="#industrial-equipment">Industrial Equipment</a>
+        </nav>
+        <main class="product-catalogue">
+          <section id="weighing-data" class="product-category" aria-labelledby="weighing-data-title">
+            <header class="product-category__heading"><h2 id="weighing-data-title">Weighing &amp; Data Management</h2></header>
+            <article class="product-card">
           <!-- <h1 id="products">Products</h1> -->
 
           <h2 id="p1">GDB - weighing software</h2>
@@ -71,6 +80,8 @@
             </li>
           </ul>
 		  <hr>
+            </article>
+            <article class="product-card">
           <h2 id="p2">G-LabelDB</h2>
           <img src="design/products/G-LabelDB.png" alt="" class="f-right"/>
           <ul>
@@ -106,6 +117,8 @@
             </li>
           </ul>
 		  <hr>
+            </article>
+            <article class="product-card">
           <h2 id="p3">GLDB-net</h2>
           <img src="design/products/GLDB-net.png" alt="" class="f-right"/>
           <ul>
@@ -141,6 +154,8 @@
             </li>
           </ul>
 		  <hr>
+            </article>
+            <article class="product-card">
           <h2 id="p4">GLDB-net statistics</h2>
           <img src="design/products/GLDB-net_statistics.png" alt="" class="f-right"/>
           <ul>
@@ -179,6 +194,11 @@
             </li>
           </ul>
 		  <hr>
+            </article>
+          </section>
+          <section id="labelling-control" class="product-category" aria-labelledby="labelling-control-title">
+            <header class="product-category__heading"><h2 id="labelling-control-title">Labelling &amp; Remote Operations</h2></header>
+            <article class="product-card">
           <h2 id="p5">G-Label Designer</h2>
           <img src="design/products/GLD.png" alt="" class="f-right"/>
           <ul>
@@ -196,6 +216,8 @@
             </li>
           </ul>
 		  <hr>
+            </article>
+            <article class="product-card">
           <h2 id="p6">GRC (remote controlling)</h2>
           <img src="design/products/GRC.png" alt="" class="f-right"/>
           <ul>
@@ -212,6 +234,8 @@
             </li>
           </ul>
 		  <hr>
+            </article>
+            <article class="product-card">
           <h2 id="p7">GPV (visualization and optimization of product lines)</h2>
           <img src="design/products/GPV.png" alt="" class="f-right"/>
           <ul>
@@ -229,6 +253,8 @@
             </li>
           </ul>
 		  <hr>
+            </article>
+            <article class="product-card">
           <h2 id="p8">GRW (remote view all scales)</h2>
           <img src="design/products/GRW.png" alt="" class="f-right"/>
           <ul>
@@ -241,6 +267,11 @@
             </li>
           </ul>
 		  <hr>
+            </article>
+          </section>
+          <section id="traceability-management" class="product-category" aria-labelledby="traceability-management-title">
+            <header class="product-category__heading"><h2 id="traceability-management-title">Traceability &amp; Production Management</h2></header>
+            <article class="product-card">
           <h2 id="p9">G-trace (tracking and traceability)</h2>
           <img src="design/products/G-trace_Green.png" alt="" class="f-right"/>
           <ul>
@@ -273,6 +304,8 @@
             </li>
           </ul>
 		  <hr>
+            </article>
+            <article class="product-card">
           <h2 id="p10">Mass Management (ultimate software for factories)</h2>
           <img src="design/products/mass_managment.png" alt="" class="f-right"/>
           <ul>
@@ -305,14 +338,17 @@
             </li>
           </ul>
           <br />
+            </article>
+          </section>
+          <section id="industrial-equipment" class="product-category" aria-labelledby="industrial-equipment-title">
+            <header class="product-category__heading"><h2 id="industrial-equipment-title">Industrial Equipment</h2></header>
+            <article id="printer" class="product-card product-card--gallery">
           
            <!-- Perex -->
-          <div id="printer" class="perex">
-            <p>Geneico Label Printer (GLP) - Labeling software</p>
-          </div>
+          <h3 class="product-card__title">Geneico Label Printer (GLP) - Labeling software</h3>
           <!-- /perex -->
 		  
-          <img src="design/slider-11.jpg" alt="" class="f-left"/>
+          <img src="design/slider-11.jpg" alt="" class="product-card__primary-image"/>
           <p>Suitable as a standalone printer, as a set printer or for weight and traceability-related products.
 
 
@@ -321,26 +357,34 @@ Geneico Labeling software, combined with Laumas weighing technology is the ideal
 GLP is suitable for label rolls up to 127mm in diameter. Consequently, the upgrade time is reduced - especially with large labels. The printers are network compatible and can also be controlled directly over the Internet. Printing unit settings and maintenance can be done without the need for tools - reducing costs and increasing print quality. New computer-based hardware provides more space and memory for faster data processing and label printing.
 </p>
           
-            <img src="design/slider-12.jpg" alt=""  class="f-right"/>
-            <img src="design/slider-13.jpg" alt="" class="f-left"/>
-            <img src="design/slider-14.jpg" alt="" class="f-left"/>
-            <img src="design/slider-15.jpg" alt=""  class="f-right"/>
+            <div class="product-gallery" aria-label="Geneico Label Printer images">
+              <img src="design/slider-12.jpg" alt="" />
+              <img src="design/slider-13.jpg" alt="" />
+              <img src="design/slider-14.jpg" alt="" />
+              <img src="design/slider-15.jpg" alt="" />
+            </div>
           
-        </div>
-        <!-- /content -->
+            </article>
 		    <!-- truck -->
-         <div id="mass" class="aside">
-            
-          
-		  
-		    <h2 style="font-size:27px;"> Γεφυροπλαστιγγα</h2>
-		  
-          <img src="design/video_preview2.jpg" alt="" class="f-left" height="170" width="260"/>
-		  <br />
-         <p>The perfect balance of technology and know-how. Whatever your business balance is and whatever business you have, we are here to help you achieve your goals. After many years in e-weighing technology, we have unrivaled experience in bridge-laying industries - from landfill to mining, from manufacturing to recycling. You can choose from an extensive range of metal and concrete prefabricated decks, designed for long life and consistent performance to reduce cost for owners.The bridgehead can be pit-mounted or surface-mounted, with ramps for easier access with high-performance power cells for ultimate reliability. We can also help with the control and management of vehicle weighing with a variety of software and driver-controlled software packages and systems. With this unique range of products and services you can have a solution that is just right for your business at the right price. <p>
-          <br />
-		 <hr>
-		</div>
+         <article id="weighbridge" class="product-card product-card--weighbridge weighbridge-product" aria-labelledby="weighbridge-title">
+          <span id="mass" class="weighbridge-product__anchor" aria-hidden="true"></span>
+          <div class="weighbridge-product__content">
+            <h2 id="weighbridge-title">Weighbridge</h2>
+            <p>The perfect balance of technology and know-how. Whatever your weighing operation or type of business, we are here to help you achieve your goals.</p>
+            <ul>
+              <li>Many years of electronic-weighing experience across weighbridge applications, from landfill and mining to manufacturing and recycling.</li>
+              <li>An extensive range of prefabricated metal and concrete decks, designed for long operating life and consistent performance to reduce costs for owners.</li>
+              <li>Pit-mounted or surface-mounted installation, with ramps for easier access and high-performance load cells for reliability.</li>
+              <li>Vehicle-weighing control and management through a variety of software packages and operator- or driver-controlled systems.</li>
+            </ul>
+            <p>This range of products and services provides a solution suited to your business at the right price.</p>
+          </div>
+          <figure class="weighbridge-product__media">
+            <img src="design/video_preview2.jpg" alt="Weighbridge" />
+          </figure>
+        </article>
+          </section>
+        </main>
 		          <!-- /truck -->
 
         <!-- /content -->

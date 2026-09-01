@@ -10,13 +10,13 @@
     <!--[if lte IE 6]><link rel="stylesheet" media="screen,projection" type="text/css" href="css/main-ie6.css" /><![endif]-->
     <link rel="stylesheet" media="screen,projection" type="text/css" href="css/style.css" />
     <link rel="stylesheet" media="screen,projection" type="text/css" href="css/site-modern.css" />
+    <link rel="stylesheet" media="screen,projection" type="text/css" href="css/products-modern.css" />
     <link rel="stylesheet" media="screen,projection" type="text/css" href="css/shared-header.css" />
-    <style type="text/css">.content h2[id^="p"] { scroll-margin-top: 100px; }</style>
     <script src="js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="js/loopedslider.js" type="text/javascript" charset="utf-8"></script>
     <script src="js/site-navigation.js" type="text/javascript" charset="utf-8" defer></script>
   </head>
-  <body>
+  <body class="products-page">
     <div id="main">
       <header class="geneico-header">
         <div class="geneico-header__inner">
@@ -30,13 +30,22 @@
       <hr class="noscreen" />
       <!-- Title + Subcategories -->
       <div id="title" class="box">
-        <h1>Products</h1>
+        <h1>Προϊόντα</h1>
       </div>
       <!-- /title -->
       <!-- Columns box -->
       <div class="cols box">
         <!-- Content -->
-        <div class="content">
+        <nav class="product-category-nav" aria-label="Κατηγορίες προϊόντων">
+          <a href="#weighing-data">Ζύγιση &amp; Διαχείριση Δεδομένων</a>
+          <a href="#labelling-control">Ετικετοποίηση &amp; Απομακρυσμένος Έλεγχος</a>
+          <a href="#traceability-management">Ιχνηλασιμότητα &amp; Διαχείριση Παραγωγής</a>
+          <a href="#industrial-equipment">Βιομηχανικός Εξοπλισμός</a>
+        </nav>
+        <main class="product-catalogue">
+          <section id="weighing-data" class="product-category" aria-labelledby="weighing-data-title">
+            <header class="product-category__heading"><h2 id="weighing-data-title">Ζύγιση &amp; Διαχείριση Δεδομένων</h2></header>
+            <article class="product-card">
           <!-- <h1 id="products">Products</h1> -->
 
           <h2 id="p1">GDB - ζυγολόγιο</h2>
@@ -71,6 +80,8 @@
             </li>
           </ul>
 		  <hr>
+            </article>
+            <article class="product-card">
           <h2 id="p2">G-LabelDB</h2>
           <img src="design/products/G-LabelDB.png" alt="" class="f-right"/>
           <ul>
@@ -106,6 +117,8 @@
             </li>
           </ul>
 		  <hr>
+            </article>
+            <article class="product-card">
           <h2 id="p3">GLDB-net</h2>
           <img src="design/products/GLDB-net.png" alt="" class="f-right"/>
           <ul>
@@ -141,6 +154,8 @@
             </li>
           </ul>
 		  <hr>
+            </article>
+            <article class="product-card">
           <h2 id="p4">GLDB-net statistics</h2>
           <img src="design/products/GLDB-net_statistics.png" alt="" class="f-right"/>
           <ul>
@@ -179,6 +194,11 @@
             </li>
           </ul>
 		  <hr>
+            </article>
+          </section>
+          <section id="labelling-control" class="product-category" aria-labelledby="labelling-control-title">
+            <header class="product-category__heading"><h2 id="labelling-control-title">Ετικετοποίηση &amp; Απομακρυσμένος Έλεγχος</h2></header>
+            <article class="product-card">
           <h2 id="p5">G-Label Designer</h2>
           <img src="design/products/GLD.png" alt="" class="f-right"/>
           <ul>
@@ -196,6 +216,8 @@
             </li>
           </ul>
 		  <hr>
+            </article>
+            <article class="product-card">
           <h2 id="p6">GRC (remote controlling)</h2>
           <img src="design/products/GRC.png" alt="" class="f-right"/>
           <ul>
@@ -212,6 +234,8 @@
             </li>
           </ul>
 		  <hr>
+            </article>
+            <article class="product-card">
           <h2 id="p7">GPV (visualization and optimization of product lines)</h2>
           <img src="design/products/GPV.png" alt="" class="f-right"/>
           <ul>
@@ -229,6 +253,8 @@
             </li>
           </ul>
 		  <hr>
+            </article>
+            <article class="product-card">
           <h2 id="p8">GRW (remote view all scales)</h2>
           <img src="design/products/GRW.png" alt="" class="f-right"/>
           <ul>
@@ -241,6 +267,11 @@
             </li>
           </ul>
 		  <hr>
+            </article>
+          </section>
+          <section id="traceability-management" class="product-category" aria-labelledby="traceability-management-title">
+            <header class="product-category__heading"><h2 id="traceability-management-title">Ιχνηλασιμότητα &amp; Διαχείριση Παραγωγής</h2></header>
+            <article class="product-card">
           <h2 id="p9">G-trace (tracking and traceability)</h2>
           <img src="design/products/G-trace_Green.png" alt="" class="f-right"/>
           <ul>
@@ -273,6 +304,8 @@
             </li>
           </ul>
 		  <hr>
+            </article>
+            <article class="product-card">
           <h2 id="p10">Mass Management (ultimate software for factories)</h2>
           <img src="design/products/mass_managment.png" alt="" class="f-right"/>
           <ul>
@@ -305,40 +338,51 @@
             </li>
           </ul>
           <br />
+            </article>
+          </section>
+          <section id="industrial-equipment" class="product-category" aria-labelledby="industrial-equipment-title">
+            <header class="product-category__heading"><h2 id="industrial-equipment-title">Βιομηχανικός Εξοπλισμός</h2></header>
+            <article id="printer" class="product-card product-card--gallery">
           
            <!-- Perex -->
-          <div id="printer" class="perex">
-            <p>Geneico Label Printer (GLP) - Ετικετέζα</p>
-          </div>
+          <h3 class="product-card__title">Geneico Label Printer (GLP) - Ετικετέζα</h3>
           <!-- /perex -->
 		  
-          <img src="design/slider-11.jpg" alt="" class="f-left"/>
+          <img src="design/slider-11.jpg" alt="" class="product-card__primary-image"/>
           <p>Κατάλληλος ως ανεξάρτητος εκτυπωτής, ως εκτυπωτής συνόλων ή για επισήμανση προϊόντων που σχετίζεται με το βάρος και την ιχνιλασιμότητα.
 
 Η ετικτέζα Geneico σε συνδυασμό με την τεχνολογία ζύγισης Laumas είναι το ιδανικό κιτ εκκίνησης για χειροκίνητη επισήμανση προϊόντων.
 Το GLP είναι κατάλληλο για ρολά ετικετών με διάμετρο μέχρι 127 χιλιοστών. Συνεπώς μειώνεται ο χρόνος αναβάθμισης - ειδικά με μεγάλες ετικέτες. Οι εκτυπωτές είναι συμβατοί με το δίκτυο και μπορούν επίσης να ελέγχονται απευθείας μέσω του Διαδικτύου. Οι ρυθμίσεις και η συντήρηση της μονάδας εκτύπωσης μπορούν να γίνουν χωρίς την ανάγκη εργαλείων - μειώνοντας το κόστος και αυξάνοντας την ποιότητα εκτύπωσης. Το νέο υλικό που βασίζεται σε υπολογιστή παρέχει περισσότερο χώρο και μεγαλύτερη μνήμη για γρήγορη επεξεργασία δεδομένων και εκτύπωσης των ετικετών.
 </p>
           
-            <img src="design/slider-12.jpg" alt=""  class="f-right"/>
-            <img src="design/slider-13.jpg" alt="" class="f-left"/>
-            <img src="design/slider-14.jpg" alt="" class="f-left"/>
-            <img src="design/slider-15.jpg" alt=""  class="f-right"/>
+            <div class="product-gallery" aria-label="Εικόνες Geneico Label Printer">
+              <img src="design/slider-12.jpg" alt="" />
+              <img src="design/slider-13.jpg" alt="" />
+              <img src="design/slider-14.jpg" alt="" />
+              <img src="design/slider-15.jpg" alt="" />
+            </div>
           
-        </div>
-        <!-- /content -->
+            </article>
 		    <!-- truck -->
-         <div id="mass" class="aside">
-            
-          
-		  
-		    <h2 style="font-size:27px;"> Γεφυροπλαστιγγα</h2>
-		  
-          <img src="design/video_preview2.jpg" alt="" class="f-left" height="170" width="260"/>
-		  <br />
-         <p> Η τέλεια ισορροπία της τεχνολογίας και της τεχνογνωσίας. Όπως και να λειτουργείτε τη ζυγαριά σας και ό,τι επιχείρηση αν έχετε, είμαστε εδώ για να σας βοηθήσουμε να πετύχετε τους στόχους σας. Μετά από πολλά χρόνια στην τεχνολογία ηλεκτρονικής ζύγισης, έχουμε ασυναγώνιστη εμπειρία στις βιομηχανίες που χρησιμοποιούν γεφυροπλάστιγγες - από την υγειονομική ταφή έως την εξόρυξη, από την κατασκευή έως την ανακύκλωση. Μπορείτε να επιλέξετε από μια εκτεταμένη γκάμα από μεταλλικά και τσιμεντένια προκατασκευασμένα καταστρώματα, σχεδιασμένα για μεγάλη διάρκεια ζωής και συνεπή απόδοση ώστε να μειώσουν το κόστος για τους ιδιοκτήτες. Η γεφυροπλάστιγγα μπορεί να είναι τοποθετημένη σε λάκκο ή επιφανειακά, με ράμπες για ευκολότερη πρόσβαση με υψηλής απόδοσης δυναμοκυψέλες για απόλυτη αξιοπιστία. Μπορούμε επίσης να βοηθήσουμε με τον έλεγχο και τη διαχείριση της ζύγισης του οχήματος με μια ποικιλία πακέτων λογισμικού και συστημάτων που ελέγχονται από τον χειριστή ή από τον οδηγό. Με αυτό το μοναδικό εύρος προϊόντων και υπηρεσιών μπορείτε να έχετε μια λύση που είναι ακριβώς κατάλληλη για την επιχείρησή σας, στη σωστή τιμή. <p>
-          <br />
-		 <hr>
-		</div>
+         <article id="weighbridge" class="product-card product-card--weighbridge weighbridge-product" aria-labelledby="weighbridge-title">
+          <span id="mass" class="weighbridge-product__anchor" aria-hidden="true"></span>
+          <div class="weighbridge-product__content">
+            <h2 id="weighbridge-title">Γεφυροπλάστιγγα</h2>
+            <p>Η τέλεια ισορροπία της τεχνολογίας και της τεχνογνωσίας. Όπως και να λειτουργείτε τη ζυγαριά σας και όποια επιχείρηση κι αν έχετε, είμαστε εδώ για να σας βοηθήσουμε να πετύχετε τους στόχους σας.</p>
+            <ul>
+              <li>Πολυετής εμπειρία στην ηλεκτρονική ζύγιση και σε εφαρμογές γεφυροπλάστιγγας, από την υγειονομική ταφή και την εξόρυξη έως την κατασκευή και την ανακύκλωση.</li>
+              <li>Εκτεταμένη γκάμα μεταλλικών και τσιμεντένιων προκατασκευασμένων καταστρωμάτων, σχεδιασμένων για μεγάλη διάρκεια ζωής και συνεπή απόδοση ώστε να μειώνεται το κόστος για τους ιδιοκτήτες.</li>
+              <li>Τοποθέτηση σε λάκκο ή επιφανειακά, με ράμπες για ευκολότερη πρόσβαση και δυναμοκυψέλες υψηλής απόδοσης για αξιοπιστία.</li>
+              <li>Έλεγχος και διαχείριση της ζύγισης οχημάτων με πακέτα λογισμικού και συστήματα που ελέγχονται από τον χειριστή ή τον οδηγό.</li>
+            </ul>
+            <p>Με αυτό το εύρος προϊόντων και υπηρεσιών μπορείτε να έχετε μια λύση κατάλληλη για την επιχείρησή σας, στη σωστή τιμή.</p>
+          </div>
+          <figure class="weighbridge-product__media">
+            <img src="design/video_preview2.jpg" alt="Γεφυροπλάστιγγα" />
+          </figure>
+        </article>
+          </section>
+        </main>
 		          <!-- /truck -->
 
         <!-- /content -->

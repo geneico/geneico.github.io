@@ -10,12 +10,14 @@
     <!--[if lte IE 6]><link rel="stylesheet" media="screen,projection" type="text/css" href="css/main-ie6.css" /><![endif]-->
     <link rel="stylesheet" media="screen,projection" type="text/css" href="css/style.css" />
     <link rel="stylesheet" media="screen,projection" type="text/css" href="css/site-modern.css" />
+    <link rel="stylesheet" media="screen,projection" type="text/css" href="css/contact-form.css" />
     <link rel="stylesheet" media="screen,projection" type="text/css" href="css/shared-header.css" />
     <script src="js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="js/loopedslider.js" type="text/javascript" charset="utf-8"></script>
     <script src="js/site-navigation.js" type="text/javascript" charset="utf-8" defer></script>
+    <script src="js/contact-form.js" type="text/javascript" charset="utf-8" defer></script>
   </head>
-  <body>
+  <body class="about-page">
     <div id="main">
       <header class="geneico-header">
         <div class="geneico-header__inner">
@@ -64,43 +66,61 @@
           <p><strong>Advancement: </strong>Είμαστε διορατικοί για να προωθήσουμε το σκοπό του οργανισμού μας, την αύξηση των ευκαιριών και της συνεισφοράς μας.</p>
           <p><strong>Reliability: </strong>Υποσχόμαστε στους πελάτες μας, ότι θα είμαστε διαθέσιμοι όταν μας χρειάζονται. Τους δείχνουμε, ότι είμαστε υπεύθυνοι και αξιόπιστοι</p>
           
-<div class="perex"> </div>
-          <h2 id="contact">Επικοινωνία με Geneico</h2>
-		 <img src="design/koperta-ze-skrzydlami.gif" alt="" class=""/>
-		 <br/>
-		 
-          <script type="text/javascript"> id=214746; t=5; </script>
-							<script type="text/javascript" src="https://kontactr.com/kpu/kontactr.js"></script>
         </div>
         <!-- /content -->
-        <!-- Sidebar -->
-        <div class="aside">
-          <h2>Social Media</h2>
-          <ul class="ul-news">
-            <li>
-				<a href="https://www.linkedin.com/company/geneico/" target="_blank"><img src="design/linkedin.jpg" alt="" /></a></li>
-			<li>
-				<a href="https://www.facebook.com/geneico/" target="_blank"><img src="design/FB.jpg" alt="" /></a></li>
-           <li>
-				<a href="https://twitter.com/Geneicogr" target="_blank"><img src="design/tweeter.jpg" alt="" /></a></li>
-			<li>
-				<a href="https://www.youtube.com/channel/UC95ncAb9FiebQisZ8zQVO0g" target="_blank"><img src="design/youtube.jpg" alt="" /></a></li>
-          </ul>
-        
-		<!-- Skype call -->
-		<script type="text/javascript" src="https://secure.skypeassets.com/i/scom/js/skype-uri.js"></script>
-		<div id="SkypeButton_Call_grgeneico_1">
-		<script type="text/javascript">
-		Skype.ui({
-		"name": "call",
-		"element": "SkypeButton_Call_grgeneico_1",
-		"participants": ["grgeneico"],
-		"imageSize": 32
-		});
-		</script>
-		</div>
-		</div>
-<!-- Skype call -->
+        <section id="contact" class="geneico-contact" aria-labelledby="contact-title">
+          <div class="contact-intro">
+            <h2 id="contact-title">Επικοινωνήστε μαζί μας</h2>
+            <p>Περιγράψτε μας την εφαρμογή, την παραγωγική διαδικασία ή την ανάγκη της επιχείρησής σας και θα επικοινωνήσουμε μαζί σας.</p>
+            <a class="contact-email" href="mailto:info@geneico.com">info@geneico.com</a>
+            <div class="contact-social">
+              <h3>Ακολουθήστε μας</h3>
+              <div class="contact-social__links">
+                <a href="https://www.linkedin.com/company/geneico/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="https://www.facebook.com/geneico/" target="_blank" rel="noopener noreferrer">Facebook</a>
+                <a href="https://www.youtube.com/channel/UC95ncAb9FiebQisZ8zQVO0g" target="_blank" rel="noopener noreferrer">YouTube</a>
+              </div>
+            </div>
+          </div>
+          <form class="contact-form" action="https://formspree.io/f/mpqvwdyz" method="POST" data-contact-form data-loading-message="Αποστολή..." data-success-message="Το μήνυμά σας στάλθηκε με επιτυχία. Θα επικοινωνήσουμε μαζί σας το συντομότερο δυνατό." data-error-message="Το μήνυμα δεν στάλθηκε. Ελέγξτε τα στοιχεία σας και προσπαθήστε ξανά." data-rate-limit-message="Έχουν γίνει πολλές προσπάθειες. Περιμένετε λίγο και δοκιμάστε ξανά.">
+            <input type="hidden" name="language" value="Greek">
+            <input type="hidden" name="source_page" value="geneico.gr/about.html">
+            <div class="contact-form__honeypot" aria-hidden="true">
+              <label for="contact-gotcha-el">Αφήστε αυτό το πεδίο κενό</label>
+              <input id="contact-gotcha-el" type="text" name="_gotcha" tabindex="-1" autocomplete="off">
+            </div>
+            <p class="contact-form__required-note">Τα πεδία με αστερίσκο (*) είναι υποχρεωτικά.</p>
+            <div class="contact-form__field">
+              <label for="contact-name-el">Ονοματεπώνυμο <span class="contact-form__required" aria-hidden="true">*</span></label>
+              <input id="contact-name-el" type="text" name="name" autocomplete="name" required>
+            </div>
+            <div class="contact-form__field">
+              <label for="contact-company-el">Εταιρεία</label>
+              <input id="contact-company-el" type="text" name="company" autocomplete="organization">
+            </div>
+            <div class="contact-form__field">
+              <label for="contact-email-el">Email <span class="contact-form__required" aria-hidden="true">*</span></label>
+              <input id="contact-email-el" type="email" name="email" autocomplete="email" required>
+            </div>
+            <div class="contact-form__field">
+              <label for="contact-phone-el">Τηλέφωνο</label>
+              <input id="contact-phone-el" type="tel" name="phone" autocomplete="tel">
+            </div>
+            <div class="contact-form__field contact-form__field--wide">
+              <label for="contact-subject-el">Θέμα <span class="contact-form__required" aria-hidden="true">*</span></label>
+              <input id="contact-subject-el" type="text" name="subject" required>
+            </div>
+            <div class="contact-form__field contact-form__field--wide">
+              <label for="contact-message-el">Μήνυμα <span class="contact-form__required" aria-hidden="true">*</span></label>
+              <textarea id="contact-message-el" name="message" required></textarea>
+            </div>
+            <div class="contact-form__actions">
+              <button type="submit" data-contact-submit>Αποστολή μηνύματος</button>
+            </div>
+            <p class="contact-form__status" data-contact-status role="status" aria-live="polite" aria-atomic="true" tabindex="-1" hidden></p>
+            <p class="contact-form__privacy-note">Τα στοιχεία που υποβάλλετε χρησιμοποιούνται αποκλειστικά για την απάντηση στο αίτημά σας.</p>
+          </form>
+        </section>
         <!-- /cols -->
         <div class="cols-bottom"></div>
         <hr class="noscreen" />
