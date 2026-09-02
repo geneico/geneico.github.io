@@ -3,9 +3,9 @@
   top: 0;
   z-index: 1000;
   width: 100%;
-  color: #0d1b32;
+  color: var(--color-text, #0d1b32);
   background: rgba(255, 255, 255, 0.96);
-  border-bottom: 1px solid #e5eaf1;
+  border-bottom: 1px solid var(--color-border, #e5eaf1);
   box-shadow: 0 4px 18px rgba(7, 26, 58, 0.05);
   backdrop-filter: blur(14px);
 }
@@ -20,7 +20,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 32px;
-  width: min(1180px, calc(100% - 48px));
+  width: min(var(--page-max-width, 1180px), calc(100% - (var(--page-gutter, 24px) * 2)));
   min-height: 78px;
   margin: 0 auto;
 }
@@ -54,9 +54,9 @@
   justify-content: center;
   min-height: 40px;
   padding: 9px 13px;
-  color: #0d1b32;
+  color: var(--color-text, #0d1b32);
   border-radius: 9px;
-  font-size: 13px;
+  font-size: var(--font-size-supporting, 13px);
   font-weight: 700;
   line-height: 1.2;
   text-decoration: none;
@@ -66,14 +66,14 @@
 .geneico-navigation__link:hover,
 .geneico-navigation__link:focus-visible,
 .geneico-navigation__link[aria-current="page"] {
-  color: #145de8;
+  color: var(--color-primary-blue, #145de8);
   background: #edf4ff;
 }
 
 .geneico-navigation__language {
   min-width: 42px;
   margin-left: 8px;
-  color: #145de8;
+  color: var(--color-primary-blue, #145de8);
   border: 1px solid #d7e5ff;
   background: #f7faff;
 }
@@ -81,8 +81,8 @@
 .geneico-navigation__language:hover,
 .geneico-navigation__language:focus-visible {
   color: #fff;
-  background: #145de8;
-  border-color: #145de8;
+  background: var(--color-primary-blue, #145de8);
+  border-color: var(--color-primary-blue, #145de8);
 }
 
 .geneico-menu-button {
@@ -91,7 +91,7 @@
   height: 44px;
   margin: 0;
   padding: 9px;
-  color: #071a3a;
+  color: var(--color-primary-navy, #071a3a);
   background: transparent;
   border: 1px solid #dce3ed;
   border-radius: 9px;
@@ -143,8 +143,8 @@
     margin: 0;
     padding: 12px;
     overflow-y: auto;
-    background: #fff;
-    border: 1px solid #e5eaf1;
+    background: var(--color-surface, #fff);
+    border: 1px solid var(--color-border, #e5eaf1);
     border-top: 0;
     border-radius: 0 0 12px 12px;
     box-shadow: 0 16px 35px rgba(7, 26, 58, 0.12);
@@ -166,7 +166,7 @@
 
 @media (max-width: 480px) {
   .geneico-header__inner {
-    width: calc(100% - 30px);
+    width: calc(100% - (var(--page-gutter, 15px) * 2));
   }
 
   .geneico-brand img {
